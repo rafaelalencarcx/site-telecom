@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="cxlogo.png" type="image/x-icon">
+</head>
+
+
+<style>
+
+    
+        
+input {
+            border: 2px solid black;
+            box-shadow: 2px 2px 2px black;
+            width: 100px;
+            height: 30px;
+            font-size: 20px;
+            margin: 1px;
+
+        }
+
+        
+    #btewsd {
+        height: 2em;
+        width: 150px;
+        background: linear-gradient( #001C78, #002EC7, #4B73F9);
+        color: white;
+        margin: 8px;
+        margin-left: 50px;
+        border-radius: 50px 50px;    
+    
+    }
+
+    #res{
+        height: 1.5em;
+        width: 80px;
+        background-color: grey;
+        color: white;
+        margin: 8px;
+        margin-left: 50px;
+        font-size: 1.5em;
+        border-radius: 3px;        
+    
+
+    }
+
+    #res4 {
+        height: 1.5em;
+        width: 80px;
+        background-color: grey;
+        color: white;
+        margin: 8px;
+        margin-left: 50px;
+        font-size: 1.5em;
+        border-radius: 3px; 
+
+    }
+
+    #cicalcatel{
+        display: block;
+        margin: auto;
+        
+        
+    }
+</style>
+<body>
+    <h2><a href="index.html"><img src="de-volta.png" alt="png"></a> Conversor de CIC </h2>
+
+
+    <h2>SIEMENS EWSD</h2>
+
+    <div id="cicalcatel"> 
+        <h3>CIC NUMÉRICO</h3> 
+        <input type="number" name="txtn1" id="txtn1"> -
+        <input type="number" name="txtn2" id="txtn2">  
+        <div id="res">CIC</div> 
+           
+        <h3>CIC EWSD</h3>
+        <input type="number" name="txtn3" id="txtn3">
+        <div id="res4">EWSD</div> <br>
+        
+        <input type="button" id="btewsd" value="Converter" onclick="somar()">
+        
+    </div>
+    <script>
+        
+    
+        function somar() {
+                var ew1 = window.document.getElementById(`txtn1`)
+                var ew2 = window.document.getElementById(`txtn2`)
+                var ew3 = window.document.getElementById(`txtn3`)
+    
+                var ewsd1 = Number(ew1.value)
+                var ewsd2 = Number(ew2.value)
+                var ewsd3 = Number(ew3.value)
+    
+                var res1 = ewsd1*32 + ewsd2
+    
+                var res2 = parseInt(ewsd3/32)
+    
+                var res3 = ewsd3 - (res2*32) 
+                res.innerHTML= `${res1} `
+                res4.innerHTML=` ${res2} - ${res3}`       
+        
+        
+        
+        }
+    </script>
+           
+
+ 
+   
+    <ul id="placa">
+        <strong>
+            <p id="subt">Alcatel S12</P>   
+        </strong> 
+
+        <li><a href="cics12.html" target="frame">Converter para TKSEQ </a> </li>       
+        <li><a href="tkseqs12.html" target="frame"> Converter para CIC</li>       
+        
+        
+           
+    </ul>
+    <iframe src="cics12.html" frameborder="0" id="axe" name="frame"></iframe>
+    </h2> 
+    
+
+    
+</body>
+</html>

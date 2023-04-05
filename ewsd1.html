@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor Cic</title>
+    <style>
+        body{
+            
+            font: normal 19pt Arial;
+            color:black; 
+            background-position: center;
+        }
+
+        
+        input {
+            border: 2px solid black;
+            box-shadow: 2px 2px 2px black;
+            width: 100px;
+            height: 30px;
+            font-size: 20px;
+            margin: 1px;
+        }
+
+        
+
+
+        #btewsd {
+            height: 2em;  
+            width: 150px;
+            background: linear-gradient( #001C78, #002EC7, #4B73F9);
+            color: white;
+            margin: 8px;
+            margin-left: 50px;
+            border-radius: 50px 50px;
+            
+        
+        }
+
+     
+    
+
+
+    </style>
+</head>
+<body>
+    
+    
+        <h3>CIC NUMÉRICO</h3>
+        <input type="number" name="txtn1" id="txtn1"> - 
+        <input type="number" name="txtn2" id="txtn2"> =  <span id="res">NUMÉRICO</span> <br>
+
+        <h3>CIC NUMÉRICO</h3>
+        <input type="number" name="txtn3" id="txtn3"> =<span id="res4">EWSD</span> <br>       
+        
+        <input type="button" id="btewsd" value="Converter" onclick="somar()">
+  
+
+    
+  
+<script>
+        
+    
+    function somar() {
+            var ew1 = window.document.getElementById(`txtn1`)
+            var ew2 = window.document.getElementById(`txtn2`)
+            var ew3 = window.document.getElementById(`txtn3`)
+
+            var ewsd1 = Number(ew1.value)
+            var ewsd2 = Number(ew2.value)
+            var ewsd3 = Number(ew3.value)
+
+            var res1 = ewsd1*32 + ewsd2
+
+            var res2 = parseInt(ewsd3/32)
+
+            var res3 = ewsd3 - (res2*32) 
+            res.innerHTML= `${res1} `
+            res4.innerHTML=` ${res2} - ${res3}`       
+    
+    
+    
+    }
+</script>
+       
+    
+    
+</body>
+</html>

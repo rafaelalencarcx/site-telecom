@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor Cic</title>
+    <style>
+        body{
+            
+            font: normal 19pt Arial;
+            color:black; 
+            background-position: center;
+        }
+
+        
+        input {
+            border: 2px solid black;
+            box-shadow: 2px 2px 2px black;
+            width: 152px;
+            height: 30px;
+            font-size: 20px;
+        }
+
+        
+
+
+        #clique {
+            height: 2em;  
+            width: 160px;
+            background: linear-gradient( #001C78, #002EC7, #4B73F9);
+            color: white;
+            margin: 8px;
+            margin-left: 50px;
+            border-radius: 50px 50px;
+            
+        
+        }
+
+     
+    
+
+
+    </style>
+</head>
+<body>
+    
+    
+        <strong>
+            <div id="res">Conversor CIC S12</div>
+        </strong>
+    <strong>CIC-<input type="number" name="txtn1" id="txtn1"></strong> <br>   
+    <input type="button" id="clique" value="Converter" onclick="camada()">
+    
+
+    
+  
+
+    <script>
+  
+                        
+        function camada() {
+            var tn1 = window.document.getElementById(`txtn1`)
+            var lic = Number(tn1.value)
+            var res= window.document.querySelector(`div#res`)
+
+            if(lic>=	1 &&lic<= 31	)	{res.innerText=`	CIC=	1 a 31	TKSEQ=	1 a 31	`}
+else if(lic>=	33 &&lic<= 63	)	{res.innerText=`	CIC=	33 a 63	TKSEQ=	101 a 131	`}
+else if(lic>=	65 &&lic<= 95	)	{res.innerText=`	CIC=	65 a 95	TKSEQ=	201 a 231	`}
+else if(lic>=	97 &&lic<= 127 	)	{res.innerText=`	CIC=	97 a 127 	TKSEQ=	301 a 331	`}
+else if(lic>=	129 &&lic<= 159	)	{res.innerText=`	CIC=	129 a 159	TKSEQ=	401 a 431	`}
+else if(lic>=	161 &&lic<= 191	)	{res.innerText=`	CIC=	161 a 191	TKSEQ=	501 a 531	`}
+else if(lic>=	193 &&lic<= 223	)	{res.innerText=`	CIC=	193 a 223	TKSEQ=	601 a 631	`}
+else if(lic>=	225 &&lic<= 255	)	{res.innerText=`	CIC=	225 a 255	TKSEQ=	701 a 731	`}
+else if(lic>=	257 &&lic<= 287	)	{res.innerText=`	CIC=	257 a 287	TKSEQ=	801 a 831	`}
+else if(lic>=	289 &&lic<= 319	)	{res.innerText=`	CIC=	289 a 319	TKSEQ=	901 a 931	`}
+else if(lic>=	321 &&lic<= 351	)	{res.innerText=`	CIC=	321 a 351	TKSEQ=	1001 a 1031	`}
+else if(lic>=	353 &&lic<= 383	)	{res.innerText=`	CIC=	353 a 383	TKSEQ=	1101 a 1131	`}
+else if(lic>=	385 &&lic<= 415	)	{res.innerText=`	CIC=	385 a 415	TKSEQ=	1201 a 1231	`}
+else if(lic>=	417 &&lic<= 447	)	{res.innerText=`	CIC=	417 a 447	TKSEQ=	1301 a 1331	`}
+else if(lic>=	449 &&lic<= 479	)	{res.innerText=`	CIC=	449 a 479	TKSEQ=	1401 a 1431	`}
+else if(lic>=	481 &&lic<= 511	)	{res.innerText=`	CIC=	481 a 511	TKSEQ=	1501 a 1531	`}
+else if(lic>=	513 &&lic<= 543	)	{res.innerText=`	CIC=	513 a 543	TKSEQ=	1601 a 1631	`}
+else if(lic>=	545 &&lic<= 575	)	{res.innerText=`	CIC=	545 a 575	TKSEQ=	1701 a 1731	`}
+else if(lic>=	577 &&lic<= 607	)	{res.innerText=`	CIC=	577 a 607	TKSEQ=	1801 a 1831	`}
+else if(lic>=	609 &&lic<= 639	)	{res.innerText=`	CIC=	609 a 639	TKSEQ=	1901 a 1931	`}
+else if(lic>=	641 &&lic<= 671	)	{res.innerText=`	CIC=	641 a 671	TKSEQ=	2001 a 2031	`}
+else if(lic>=	673 &&lic<= 703	)	{res.innerText=`	CIC=	673 a 703	TKSEQ=	2101 a 2131	`}
+else if(lic>=	705 &&lic<= 735	)	{res.innerText=`	CIC=	705 a 735	TKSEQ=	2201 a 2231	`}
+else if(lic>=	737 &&lic<= 767	)	{res.innerText=`	CIC=	737 a 767	TKSEQ=	2301 a 2331	`}
+else if(lic>=	769 &&lic<= 799	)	{res.innerText=`	CIC=	769 a 799	TKSEQ=	2401 a 2431	`}
+else if(lic>=	801 &&lic<= 831	)	{res.innerText=`	CIC=	801 a 831	TKSEQ=	2501 a 2531	`}
+else if(lic>=	833 &&lic<= 863	)	{res.innerText=`	CIC=	833 a 863	TKSEQ=	2601 a 2631	`}
+else if(lic>=	865 &&lic<= 895	)	{res.innerText=`	CIC=	865 a 895	TKSEQ=	2701 a 2731	`}
+else if(lic>=	897 &&lic<= 927	)	{res.innerText=`	CIC=	897 a 927	TKSEQ=	2801 a 2831	`}
+else if(lic>=	929 &&lic<= 959	)	{res.innerText=`	CIC=	929 a 959	TKSEQ=	2901 a 2931	`}
+else if(lic>=	961 &&lic<= 991	)	{res.innerText=`	CIC=	961 a 991	TKSEQ=	3001 a 3031	`}
+else if(lic>=	993 &&lic<= 1023	)	{res.innerText=`	CIC=	993 a 1023	TKSEQ=	3101 a 3131	`}
+else if(lic>=	1025 &&lic<= 1055	)	{res.innerText=`	CIC=	1025 a 1055	TKSEQ=	3201 a 3231	`}
+else if(lic>=	1057 &&lic<= 1087	)	{res.innerText=`	CIC=	1057 a 1087	TKSEQ=	3301 a 3331	`}
+else if(lic>=	1089 &&lic<= 1119	)	{res.innerText=`	CIC=	1089 a 1119	TKSEQ=	3401 a 3431	`}
+else if(lic>=	1121 &&lic<= 1151	)	{res.innerText=`	CIC=	1121 a 1151	TKSEQ=	3501 a 3531	`}
+else if(lic>=	1153 &&lic<= 1183	)	{res.innerText=`	CIC=	1153 a 1183	TKSEQ=	3601 a 3631	`}
+else if(lic>=	1185 &&lic<= 1215	)	{res.innerText=`	CIC=	1185 a 1215	TKSEQ=	3701 a 3731	`}
+else if(lic>=	1217 &&lic<= 1247	)	{res.innerText=`	CIC=	1217 a 1247	TKSEQ=	3801 a 3831	`}
+else if(lic>=	1249 &&lic<= 1279	)	{res.innerText=`	CIC=	1249 a 1279	TKSEQ=	3901 a 3931	`}
+else if(lic>=	1281 &&lic<= 1311	)	{res.innerText=`	CIC=	1281 a 1311	TKSEQ=	4001 a 4031	`}
+else if(lic>=	1313 &&lic<= 1343	)	{res.innerText=`	CIC=	1313 a 1343	TKSEQ=	4101 a 4131	`}
+else if(lic>=	1345 &&lic<= 1375	)	{res.innerText=`	CIC=	1345 a 1375	TKSEQ=	4201 a 4231	`}
+else if(lic>=	1377 &&lic<= 1407	)	{res.innerText=`	CIC=	1377 a 1407	TKSEQ=	4301 a 4331	`}
+else if(lic>=	1409 &&lic<= 1433	)	{res.innerText=`	CIC=	1409 a 1433	TKSEQ=	4401 a 4431	`}
+else if(lic>=	1441 &&lic<= 1471	)	{res.innerText=`	CIC=	1441 a 1471	TKSEQ=	4501 a 4531	`}
+else if(lic>=	1473 &&lic<= 1503	)	{res.innerText=`	CIC=	1473 a 1503	TKSEQ=	4601 a 4631	`}
+else if(lic>=	1505 &&lic<= 1535	)	{res.innerText=`	CIC=	1505 a 1535	TKSEQ=	4701 a 4731	`}
+else if(lic>=	1537 &&lic<= 1567	)	{res.innerText=`	CIC=	1537 a 1567	TKSEQ=	4801 a 4831	`}
+else if(lic>=	1569 &&lic<= 1599	)	{res.innerText=`	CIC=	1569 a 1599	TKSEQ=	4901 a 4931	`}
+else if(lic>=	1601 &&lic<= 1631	)	{res.innerText=`	CIC=	1601 a 1631	TKSEQ=	5001 a 5031	`}
+else if(lic>=	1633 &&lic<= 1663	)	{res.innerText=`	CIC=	1633 a 1663	TKSEQ=	5101 a 5131	`}
+else if(lic>=	1665 &&lic<= 1695	)	{res.innerText=`	CIC=	1665 a 1695	TKSEQ=	5201 a 5231	`}
+else if(lic>=	1697 &&lic<= 1727	)	{res.innerText=`	CIC=	1697 a 1727	TKSEQ=	5301 a 5331	`}
+else if(lic>=	1729 &&lic<= 1759	)	{res.innerText=`	CIC=	1729 a 1759	TKSEQ=	5401 a 5431	`}
+else if(lic>=	1761 &&lic<= 1791	)	{res.innerText=`	CIC=	1761 a 1791	TKSEQ=	5501 a 5531	`}
+else if(lic>=	1793 &&lic<= 1823	)	{res.innerText=`	CIC=	1793 a 1823	TKSEQ=	5601 a 5631	`}
+else if(lic>=	1825 &&lic<= 1855	)	{res.innerText=`	CIC=	1825 a 1855	TKSEQ=	5701 a 5731	`}
+else if(lic>=	1857 &&lic<= 1887	)	{res.innerText=`	CIC=	1857 a 1887	TKSEQ=	5801 a 5831	`}
+else if(lic>=	1889 &&lic<= 1919	)	{res.innerText=`	CIC=	1889 a 1919	TKSEQ=	5901 a 5931	`}
+else if(lic>=	1921 &&lic<= 1951	)	{res.innerText=`	CIC=	1921 a 1951	TKSEQ=	6001 a 6031	`}
+else if(lic>=	1953 &&lic<= 1983	)	{res.innerText=`	CIC=	1953 a 1983	TKSEQ=	6101 a 6131	`}
+else if(lic>=	1985 &&lic<= 2015	)	{res.innerText=`	CIC=	1985 a 2015	TKSEQ=	6201 a 6231	`}
+else if(lic>=	2017 &&lic<= 2047	)	{res.innerText=`	CIC=	2017 a 2047	TKSEQ=	6301 a 6331	`}
+else if(lic>=	2049 &&lic<= 2079	)	{res.innerText=`	CIC=	2049 a 2079	TKSEQ=	6401 a 6431	`}
+else if(lic>=	2081 &&lic<= 2111	)	{res.innerText=`	CIC=	2081 a 2111	TKSEQ=	6501 a 6531	`}
+else if(lic>=	2113 &&lic<= 2143	)	{res.innerText=`	CIC=	2113 a 2143	TKSEQ=	6601 a 6631	`}
+else if(lic>=	2149 &&lic<= 2175	)	{res.innerText=`	CIC=	2149 a 2175	TKSEQ=	6701 a 6731	`}
+else if(lic>=	2177 &&lic<= 2207	)	{res.innerText=`	CIC=	2177 a 2207	TKSEQ=	6801 a 6831	`}
+else if(lic>=	2209 &&lic<= 2239	)	{res.innerText=`	CIC=	2209 a 2239	TKSEQ=	6901 a 6931	`}
+else if(lic>=	2241 &&lic<= 2271	)	{res.innerText=`	CIC=	2241 a 2271	TKSEQ=	7001 a 7031	`}
+else if(lic>=	2273 &&lic<= 2303	)	{res.innerText=`	CIC=	2273 a 2303	TKSEQ=	7101 a 7131	`}
+else if(lic>=	2305 &&lic<= 2335	)	{res.innerText=`	CIC=	2305 a 2335	TKSEQ=	7201 a 7231	`}
+else if(lic>=	2337 &&lic<= 2367	)	{res.innerText=`	CIC=	2337 a 2367	TKSEQ=	7301 a 7331	`}
+else if(lic>=	2369 &&lic<= 2399	)	{res.innerText=`	CIC=	2369 a 2399	TKSEQ=	7401 a 7431	`}
+else if(lic>=	2401 &&lic<= 2431	)	{res.innerText=`	CIC=	2401 a 2431	TKSEQ=	7501 a 7531	`}
+else if(lic>=	2433 &&lic<= 2463	)	{res.innerText=`	CIC=	2433 a 2463	TKSEQ=	7601 a 7631	`}
+else if(lic>=	2465 &&lic<= 2495	)	{res.innerText=`	CIC=	2465 a 2495	TKSEQ=	7701 a 7731	`}
+else if(lic>=	2497 &&lic<= 2527	)	{res.innerText=`	CIC=	2497 a 2527	TKSEQ=	7801 a 7831	`}
+else if(lic>=	2529 &&lic<= 2559	)	{res.innerText=`	CIC=	2529 a 2559	TKSEQ=	7901 a 7931	`}
+else if(lic>=	2561 &&lic<= 2561	)	{res.innerText=`	CIC=	2561 a 2561	TKSEQ=	8001 a 8031	`}
+else if(lic>=	2593 &&lic<= 2623	)	{res.innerText=`	CIC=	2593 a 2623	TKSEQ=	8101 a 8131	`}
+else if(lic>=	2625 &&lic<= 2655	)	{res.innerText=`	CIC=	2625 a 2655	TKSEQ=	8201 a 8231	`}
+else if(lic>=	2657 &&lic<= 2687	)	{res.innerText=`	CIC=	2657 a 2687	TKSEQ=	8301 a 8331	`}
+else if(lic>=	2689 &&lic<= 2719	)	{res.innerText=`	CIC=	2689 a 2719	TKSEQ=	8401 a 8431	`}
+else if(lic>=	2721 &&lic<= 2751	)	{res.innerText=`	CIC=	2721 a 2751	TKSEQ=	8501 a 8531	`}
+else if(lic>=	2753 &&lic<= 2783	)	{res.innerText=`	CIC=	2753 a 2783	TKSEQ=	8601 a 8631	`}
+else if(lic>=	2785 &&lic<= 2815	)	{res.innerText=`	CIC=	2785 a 2815	TKSEQ=	8701 a 8731	`}
+else if(lic>=	2817 &&lic<= 2847	)	{res.innerText=`	CIC=	2817 a 2847	TKSEQ=	8801 a 8831	`}
+else if(lic>=	2849 &&lic<= 2879	)	{res.innerText=`	CIC=	2849 a 2879	TKSEQ=	8901 a 8931	`}
+else if(lic>=	2881 &&lic<= 2911	)	{res.innerText=`	CIC=	2881 a 2911	TKSEQ=	9001 a 9031	`}
+else if(lic>=	2913 &&lic<= 2943	)	{res.innerText=`	CIC=	2913 a 2943	TKSEQ=	9101 a 9131	`}
+else if(lic>=	2945 &&lic<= 2975	)	{res.innerText=`	CIC=	2945 a 2975	TKSEQ=	9201 a 9231	`}
+else if(lic>=	2977 &&lic<= 3007	)	{res.innerText=`	CIC=	2977 a 3007	TKSEQ=	9301 a 9331	`}
+else if(lic>=	3009 &&lic<= 3039	)	{res.innerText=`	CIC=	3009 a 3039	TKSEQ=	9401 a 9431	`}
+else if(lic>=	3041 &&lic<= 3071	)	{res.innerText=`	CIC=	3041 a 3071	TKSEQ=	9501 a 9531	`}
+else if(lic>=	3073 &&lic<= 3103	)	{res.innerText=`	CIC=	3073 a 3103	TKSEQ=	9601 a 9631	`}
+else if(lic>=	3105 &&lic<= 3135	)	{res.innerText=`	CIC=	3105 a 3135	TKSEQ=	9701 a 9731	`}
+else if(lic>=	3137 &&lic<= 3167	)	{res.innerText=`	CIC=	3137 a 3167	TKSEQ=	9801 a 9831	`}
+else if(lic>=	3169 &&lic<= 3199	)	{res.innerText=`	CIC=	3169 a 3199	TKSEQ=	9901 a 9931	`}
+
+        }
+
+    </script>
+    
+</body>
+</html>

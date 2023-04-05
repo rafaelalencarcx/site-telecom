@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+
+
+h1{
+    font-size: 90px;
+}
+h2 { 
+    display: block;
+    font-size: 35px;
+    margin: 10px;
+    
+     color: antiquewhite;
+    background: linear-gradient( #001C78, #002EC7, #4B73F9);
+    border-radius: 10px;    
+    padding: 20px 20px 20px 20px;
+    
+    box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.473);
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    
+}
+table {
+    border-collapse: collapse;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.637);
+    margin: auto;
+        
+
+}
+
+thead {
+    background: linear-gradient( #001C78, #002EC7, #4B73F9);
+    color: antiquewhite;
+}
+#relsip tr:nth-child(even) {
+    background-color: rgba(119, 136, 153, 0.349);
+}
+caption {
+    background-color: rgba(119, 136, 153, 0.349); 
+    font-size: 20px;
+    border-radius: 8px 8px 0px 0px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.637);
+    
+}
+
+#rs {
+    color: whitesmoke;
+}
+
+#subt {
+    font-size: 40px;
+}
+
+
+
+    
+     
+
+section#antena {
+    background-image: url(antena.jpg);
+    background-position: center;
+}
+section {
+    padding-top: 6vh;
+    padding-bottom: 10vh;  
+    line-height: 2em; 
+    padding-left: 30px;
+    font-size: 4.5vw;
+    color: aliceblue;
+}
+section.imagem {
+    background-color: grey;
+    color: white;
+    background-size: cover;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.685);
+    background-attachment: fixed;
+}
+
+span {
+    display: block;
+       font-size: 25px;
+    margin: 10px;
+    
+     color: antiquewhite;
+    background: linear-gradient( #001C78, #002EC7, #4B73F9);
+    border-radius: 10px;    
+    padding: 20px 20px 20px 20px;
+    
+    box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.473);
+    
+    
+    
+}
+
+      
+            
+
+    
+
+        th, tr, td {
+            color: black;
+            border: 3px solid black;
+            padding: 3px;
+
+        }
+
+        #site, #predio,  #ronda , #chavetxcx, #chavepredio, #obs, #lobato, #seg{
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: larger;
+           
+            
+        }
+
+        #dia, #noite{
+            color: white;
+            background: linear-gradient( #002EC7, #4B73F9);
+
+        }
+
+        
+
+        
+
+
+        iframe#tela {
+            display: block;
+            margin: auto;
+            width: 100vw;
+            height: 135vw;           
+            
+        }
+
+
+        iframe#axe  {
+            
+           display: block;
+            margin: auto;
+            width: 90vw;
+            height: 135vw;           
+            
+        }
+
+    
+
+
+       #titulo {
+        background-color: darkslategray;
+        color: white
+       }
+       
+       #fixo tr:nth-child(even) {
+                background-color: rgba(222, 184, 135, 0.336);
+            }
+
+       #cxtx{
+        background-color: grey;
+        color: aliceblue;
+        
+       }
+
+       
+
+       
+
+       #cxabc {
+        background-image: linear-gradient(#750010,#C2001B, #F50021);
+        color: aliceblue; 
+        font-weight: bolder;   
+        }
+
+        #cxabcbloc {
+
+        background-color: #f5002144;        
+        font-weight: bolder;  
+
+        }
+
+         #cxip{
+        background-image: linear-gradient(#001C78, #002EC7, #4B73F9);
+        color: aliceblue;
+        font-weight: bolder;  
+        
+       }
+
+       #cxipbloc {
+        
+        background-color: rgba(135, 206, 250, 0.5);        
+        font-weight: bolder; 
+
+       }
+       
+       #cxpe{
+        background-image: linear-gradient(#755D08,#C29B0E, #F7D55B);
+        color: black; 
+        font-weight: bolder;     
+       }
+
+       #cxpebloc {
+        
+        background-color: rgba(255, 255, 0, 0.329);        
+        font-weight: bolder; 
+
+       }
+
+       #disc {
+        
+            background-image: linear-gradient(#BD5500,#F06B01, #F29549);
+            color: black; 
+            font-weight: bolder;     
+       }
+
+       #discbloc {
+        background-color: rgba(255, 68, 0, 0.493);        
+        font-weight: bolder; 
+
+
+       }
+
+       #serv {
+        background-image: linear-gradient(#016970,#01B1BD, #4BE7F2);
+            color: black; 
+            font-weight: bolder;     
+       }
+
+       #servbloc {
+        background-color: rgba(172, 255, 47, 0.527);        
+        font-weight: bolder; 
+
+       }
+
+       
+
+      
+
+        #txnt {
+        background-image: linear-gradient(#3C0070,#6500BD, #A349F2);
+        color: aliceblue; 
+        font-weight: bolder;  
+        
+    }
+        #txntbloc {
+        background-color: rgba(128, 0, 128, 0.418);        
+        font-weight: bolder; 
+
+
+        }
+
+        #area{
+            background-color: gainsboro;
+
+        }
+
+        #nome {
+            background-color: gainsboro;
+
+        }
+        #contato {
+            background-color: gainsboro;
+
+        }
+
+
+        #fixo tr:nth-child(even) {
+            background-color: rgba(222, 184, 135, 0.336);
+        }
+        #cx tr:nth-child(odd) {
+            background-color: rgba(222, 184, 135, 0.336);
+        }
+        
+        #tx tr:nth-child(odd) {
+            background-color: rgba(222, 184, 135, 0.336);
+        }
+
+        ul {
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2em;                      
+            background: linear-gradient( #001C78, #002EC7, #4B73F9);
+            margin: center;
+            color: aliceblue; 
+            border-radius: 20px; 
+            box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.473);
+    
+        }
+           
+            
+        
+        li > a {
+            color: aliceblue;
+            font-size: 1.2em;
+            text-decoration: none;
+            font-weight: bolder;
+        }
+
+        li >a:hover {
+            color: #14FA0A;
+            text-decoration: underline;
+            border: 0.2px solid  #14FA0A;
+                
+          
+        }
+
+        div > a {
+            color: aliceblue;
+            font-size: 1.2em;
+            text-decoration: none;
+            font-weight: bolder;
+            
+        }
+
+        div >a:hover {
+            color: #14FA0A;
+            text-decoration: underline;
+          
+            
+
+        }
+        #escala {
+            width: 98%;
+            height: 98%;
+        }
+
+            
+
+        
+
+     
+
+        
+            
+
