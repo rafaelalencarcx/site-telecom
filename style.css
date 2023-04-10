@@ -219,6 +219,21 @@ span {
 
 
        }
+       #guard{
+        
+        background-image: linear-gradient(#7D4632,#AD6146, #F29549);
+        color: black; 
+        font-weight: bolder; 
+
+       }
+
+       
+       #guardbloc{
+        background-color: #f29549b7;        
+        font-weight: bolder; 
+
+       }
+
 
        #serv {
         background-image: linear-gradient(#016970,#01B1BD, #4BE7F2);
@@ -231,6 +246,8 @@ span {
         font-weight: bolder; 
 
        }
+
+
 
        
 
