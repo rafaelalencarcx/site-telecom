@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+#escdow {
+    display: none;
+}
+
+a::after{
+    content: "Escala de 2023";
+}
