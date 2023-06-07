@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pr-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <link rel="shortcut icon" href="cxlogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    
+      <title>Calcular Prazo DDR</title>
+      <style>
+
+        input[type="text"] {
+          width: 70px;
+          border: 1px solid black;
+          box-shadow: 2px 2px 2px black;
+          
+         
+        }
+
+        
+        
+        input {
+           margin: 5px
+          }
+    
+        button {
+          margin: 5px;
+          padding: 5px;
+          border: 1px solid black;
+          box-shadow: 2px 2px 2px black;
+          background-color: blue;
+          color: aliceblue;
+          
+        }
+    
+        p {
+          font-weight: bold;
+        }
+    
+        .mensagem {
+          margin-top: 10px;
+          font-weight: bold;
+        }
+    
+        .mensagem.vermelho {
+          color: red;
+        }
+    
+        .mensagem.verde {
+          color: green;
+        }
+      </style>
+    </head>
+    <body>
+      <h2><a href="index.html"><img src="de-volta.png" alt="png"></a>CALCULAR PRAZO DDR</h2>
+  
+      <ul>1 Selecione a quantidade de períodos que o DDR ficou em nosso gestor</ul>
+      <ul>2 Insira  horas e minutos do inicio e fim de cada período</ul>
+      <ul>3 Click em Calcular</ul>
+    
+      <div id="intervalos">
+        <div class="intervalo">
+          <p>Período 1:</p>
+          <label for="intervalo1Inicio">Início (HH:MM):</label>
+          <input type="text" class="intervaloInicio" placeholder="HH:MM">
+    
+          <label for="intervalo1Fim">Fim (HH:MM):</label>
+          <input type="text" class="intervaloFim" placeholder="HH:MM">
+        </div>
+      </div>
+    
+      <button onclick="adicionarIntervalo()">Adicionar Período</button>
+      <button onclick="reset()">Reset</button>
+      <button onclick="calcular()">Calcular</button>
+    
+      <p>Ativo em nosso gestor: <div id="resultado"></div></p>
+    
+      <p class="mensagem" id="mensagem"></p>
+    
+      <script>
+        let numeroIntervalos = 1;
+    
+        function adicionarIntervalo() {
+          if (numeroIntervalos >= 8) {
+            return;
+          }
+    
+          numeroIntervalos++;
+    
+          const intervalosDiv = document.getElementById('intervalos');
+    
+          const novoIntervaloDiv = document.createElement('div');
+          novoIntervaloDiv.className = 'intervalo';
+    
+          novoIntervaloDiv.innerHTML = `
+            <p>Período ${numeroIntervalos}:</p>
+            <label for="intervalo${numeroIntervalos}Inicio">Início (HH:MM):</label>
+            <input type="text" class="intervaloInicio" placeholder="HH:MM">
+    
+            <label for="intervalo${numeroIntervalos}Fim">Fim (HH:MM):</label>
+            <input type="text" class="intervaloFim" placeholder="HH:MM">
+          `;
+    
+          intervalosDiv.appendChild(novoIntervaloDiv);
+        }
+    
+        function reset() {
+          numeroIntervalos = 1;
+          const intervalosDiv = document.getElementById('intervalos');
+          intervalosDiv.innerHTML = '';
+    
+          const primeiroIntervaloDiv = document.createElement('div');
+          primeiroIntervaloDiv.className = 'intervalo';
+    
+          primeiroIntervaloDiv.innerHTML = `
+            <p>Intervalo 1:</p>
+            <label for="intervalo1Inicio">Início (HH:MM):</label>
+            <input type="text" class="intervaloInicio" placeholder="HH:MM">
+    
+            <label for="intervalo1Fim">Fim (HH:MM):</label>
+            <input type="text" class="intervaloFim" placeholder="HH:MM">
+          `;
+    
+          intervalosDiv.appendChild(primeiroIntervaloDiv);
+    
+          document.getElementById('resultado').textContent = '';
+          document.getElementById('mensagem').textContent = '';
+          document.getElementById('mensagem').className = 'mensagem';
+        }
+    
+        function converterParaSegundos(hora) {
+          const partesHora = hora.split(':');
+          const horas = parseInt(partesHora[0]) || 0;
+          const minutos = parseInt(partesHora[1]) || 0;
+          return horas * 3600 + minutos * 60;
+        }
+    
+        function converterParaStringTempo(segundos) {
+          const horas = Math.floor(segundos / 3600);
+          segundos %= 3600;
+          const minutos = Math.floor(segundos / 60);
+          segundos %= 60;
+          return `${horas.toString().padStart(2, '0')}:${minutos.toString().padStart(2, '0')}`;
+        }
+    
+        function calcular() {
+          const intervalosInicio = document.getElementsByClassName('intervaloInicio');
+          const intervalosFim = document.getElementsByClassName('intervaloFim');
+    
+          let somaTotal = 0;
+    
+          for (let i = 0; i < intervalosInicio.length; i++) {
+            const inicio = intervalosInicio[i].value.trim();
+            const fim = intervalosFim[i].value.trim();
+    
+            const diferenca = converterParaSegundos(fim) - converterParaSegundos(inicio);
+            somaTotal += diferenca;
+          }
+    
+          const resultadoFinal = converterParaStringTempo(somaTotal);
+    
+          document.getElementById('resultado').textContent = resultadoFinal;
+    
+          const mensagemElement = document.getElementById('mensagem');
+          mensagemElement.className = 'mensagem';
+    
+          if (somaTotal > 14400) {
+            mensagemElement.textContent = 'DDR fora do prazo, favor entrar em contato com a sua supervisão.';
+            mensagemElement.classList.add('vermelho');
+          } else {
+            mensagemElement.textContent = 'DDR dentro do prazo.';
+            mensagemElement.classList.add('verde');
+          }
+        }
+      </script>
+    </body>
+    </html>
+    
