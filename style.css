@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
 
 
+
 h1{
     font-size: 50px;
     margin: 10px;
@@ -134,15 +135,13 @@ span {
             
         }
 
-
-        iframe#axe  {
+        iframe#axe{
             
-           display: block;
-            margin: auto;
-            width: 90vw;
-            height: 135vw;           
-            
+           
+            height: 100vh;
+            width: 50vw;
         }
+
 
     
 
